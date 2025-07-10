@@ -879,7 +879,7 @@ def evaluate(
     criterion.eval()
 
     if args.sam_tt_norm:
-        predictor = get_sam(sam_checkpoint=args.sam_model_path)
+        predictor = get_sam(sam_checkpoint=args.sam_model_path, device=device)
     else:
         predictor = None
 
